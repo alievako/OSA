@@ -19,7 +19,7 @@ int main()
     sem_t *sem;
     unsigned int sem_value;
     shm_key = ftok("/dev/null", 65);
-    shm_id = shmget(shm_id, sizeof(int), 0644 | IPC_CREAT);
+    shm_id = shmget(shm_key, sizeof(int), 0644 | IPC_CREAT);
     if (shm_id < 0)
     {
         perror("shmgget");
